@@ -14,4 +14,16 @@ def numeric_to_buckets(df, column_name):
 for feature in df.columns[:-1]:
     numeric_to_buckets(df, feature)
     print(df.groupby(feature).quality.mean(), '\n')
+------------------------------------------
+import time
+import pandas as pd
+import numpy as np
+
+with open('books_published_last_two_years.txt') as f:
+    recent_books = f.read().split('\n')
+    
+with open('all_coding_books.txt') as f:
+    coding_books = f.read().split('\n')
+
+
 """
